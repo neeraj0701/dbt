@@ -1,9 +1,12 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: my_new_project
+    database: raw
     schema: public                  # Schema where raw tables are stored
     tables:
       - name: raw_customers
       - name: raw_orders
+      - name: raw_products
+      - name: raw_order_items
       
