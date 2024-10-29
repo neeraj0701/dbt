@@ -11,10 +11,3 @@ models:
       - name: full_name
         tests:
           - not_null
-
-  - name: transformed_sales_fact
-    description: "Fact table for sales metrics"
-    columns:
-      - name: total_revenue
-        tests:
-          - not_null

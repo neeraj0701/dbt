@@ -5,5 +5,5 @@ SELECT
   o.total_amount,
   c.customer_id,
   c.full_name AS customer_name
-FROM {{ source('raw', 'raw_orders') }} o
+FROM raw_orders
 JOIN {{ ref('transformed_customers') }} c ON o.customer_id = c.customer_id
