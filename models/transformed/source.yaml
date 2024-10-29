@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public                  # Schema where raw tables are stored
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      
