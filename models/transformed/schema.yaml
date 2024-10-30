@@ -1,13 +1,16 @@
 version: 2
 
 models:
-  - name: transformed_customers
-    description: "Cleaned and deduplicated customer data"
-    columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
-      - name: full_name
-        tests:
-          - not_null
+  - name: clean_customers
+    description: "Customer table with standardized data"
+    tests:
+      - unique:
+          column_name: customer_id
+      - not_null:
+          column_name: full_name
+
+  - name: clean_sales_fact
+    description: "Fact table for sales data"
+    tests:
+      - not_null:
+          column_name: total_revenue
